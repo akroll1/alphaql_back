@@ -9,12 +9,7 @@ const typeDefs = fs.readFileSync(__dirname + '/schema.graphql').toString();
 // The resolvers
 const resolvers = {
     Query: {
-        book: (_,args) => Books.getBook(args._id),
         books: () => Books.getAllBooks(),
-    },
-    Mutation: {
-        // could do some destructuring, below.
-        createBook: (_, args) => Books.createBook(args.input)
     }
 };
 

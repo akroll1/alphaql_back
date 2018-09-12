@@ -12,4 +12,4 @@ const databaseName = 'bookstore';
 const getClient = () => {
     return Mongodb.MongoClient.connect(url, {useNewUrlParser: true});
 };
-export {getClient,databaseName,ObjectId}
+export {getClient}

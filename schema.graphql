@@ -1,10 +1,7 @@
 type Query {
-    book(_id: String!): Book
     books: [Book]
 }
-type Mutation {
-    createBook(input: BookInput): Book
-}
+
 type Book {
     _id: String!
     uuid: String
@@ -16,22 +13,4 @@ type Book {
     publisher: String
     pages: Int
     description: String
-    reviews: [Review]
-}
-
-type Review {
-    reviewer: String
-    review: String
-}
-input BookInput {
-    uuid: String!
-    isbn: String
-    title: String!
-    subtitle: String
-    author: String!
-    published: String
-    publisher: String
-    pages: Int
-    description: String
-    website: String
 }

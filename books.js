@@ -6,7 +6,7 @@ async function getAllBooks() {
     const db = client.db(databaseName);
     try{
         const Books = db.collection('Books');
-        const result = await Books.find().limit(100).toArray();
+        const result = await Books.find().limit(10).toArray();
         return result;
     } catch(err){
         console.error('getBooks error: ',err);
